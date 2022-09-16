@@ -1,0 +1,22 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 90px 1fr 500px;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+        ". content ."
+}
+
+.content {
+    grid-area: content;
+    justify-content: start;
+}
+
+.button {
+    margin-left: 140px;
+    margin-top:50px;
+}

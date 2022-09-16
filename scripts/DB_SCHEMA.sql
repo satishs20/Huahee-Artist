@@ -1,0 +1,6 @@
+USE HuaheeArtistDB;
+GO
+
+CREATE TABLE [User] (
+	Id INT NOT NULL PRIMARY KEY
+);

@@ -1,0 +1,18 @@
+How to use script
+1. Copy all scripts folder over inside project folder
+2. Run DBSetup.bat
+3. Inside Visual Studio, go to Web.Config file
+4. Add the following inside <configuration>
+<connectionStrings>
+	<add name="HuaheeArtist" connectionString="Data Source=(LocalDb)\HuaheeArtist;Integrated Security=SSPI;Database=HuaheeArtistDB" providerName="System.Data.SqlClient" />
+</connectionStrings>
+
+How to add tables/change table
+- Change the sql in DB_SCHEMA.sql
+
+How to connect to sql inside c# coding
+using System.Configuration;
+using System.Data.SqlClient;
+...
+SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["HuaheeArtist"].ConnectionString)
+...

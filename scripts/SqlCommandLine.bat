@@ -1,0 +1,1 @@
+sqlcmd -S "(localdb)\HuaheeArtist" -d "HuaheeArtistDB"

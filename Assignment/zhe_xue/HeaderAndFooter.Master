@@ -1,0 +1,49 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="HeaderAndFooter.master.cs" Inherits="HuaheeArtist_v3.HeaderAndFooter" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>HuaheeArtist</title>
+    <link href="HeaderAndFooterCss.css" rel="stylesheet" />
+    <script src="DesignFunction.js"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+            <div class="flex-container">
+                <div><asp:ImageButton ID="logo" runat="server" OnClick="logo_Click" ImageUrl="../Images/logo.png" CssClass="logo"/></div>
+                <asp:TextBox ID="searchbox" runat="server" CssClass="textplace"> </asp:TextBox>
+                <div><asp:ImageButton ID="search" runat="server" OnClientClick="search_Click" CssClass="search" OnClick="search_Click" ImageUrl="../Images/loupe.png"/></div>
+                <div><asp:ImageButton ID="shoppingcart" runat="server" CssClass="cart" OnClick="shoppingcart_Click" OnClientClick="shoppingcart_Click" ImageUrl="../Images/shopping-cart.png"  /></div>
+                <div><asp:ImageButton ID="wishlist" runat="server" CssClass="wish" OnClick="Button2_Click" OnClientClick="Button2_Click" ImageUrl="../Images/wishlist.png" /></div>
+                <asp:Table ID="TableArrangement" runat="server">
+                    <asp:TableRow runat="server">  
+                        <asp:TableCell runat="server"><asp:Button ID="signup" runat="server" Text="Sign Up" CssClass="btn" OnClick="signup_Click" /></asp:TableCell>
+                        <asp:TableCell runat="server"><asp:Button ID="login" runat="server" Text="Log In" CssClass="btnNormal" OnClick="login_Click" /></asp:TableCell>
+                        <asp:TableCell runat="server"><asp:Button ID="user" runat="server" Text="Profile" OnClick="intoProfile" CssClass="btnbottom"/></asp:TableCell>
+                    </asp:TableRow>
+                </asp:Table>
+                </div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+
+            </asp:ContentPlaceHolder>
+
+            <asp:Table ID="table4" CssClass="underfooter" runat="server" > 
+        <asp:TableRow runat="server">  
+            <asp:TableCell runat="server" CssClass="slogan"><h2>A New Art, A New Life</h2></asp:TableCell>
+            <asp:TableCell runat="server" CssClass="slogansub"></asp:TableCell>
+            <asp:TableCell runat="server" CssClass="slogansub"></asp:TableCell>
+            <asp:TableCell runat="server" CssClass="slogan"><button class="btnbottom">Join As Artist</button></asp:TableCell>
+        </asp:TableRow>  
+                <asp:TableRow runat="server">  
+                    <asp:TableCell runat="server" CssClass="slogan"></asp:TableCell>
+                    <asp:TableCell runat="server" CssClass="slogansub"></asp:TableCell>
+                    <asp:TableCell runat="server" CssClass="slogansub"></asp:TableCell>
+                    <asp:TableCell runat="server" CssClass="slogansubcover">&#169; 2022 HuaHee, Inc.</asp:TableCell>
+                </asp:TableRow> 
+        </asp:Table>
+    </form>
+</body>
+</html>
