@@ -1,5 +1,4 @@
-1.First page is the gallery page where non-login/customer can use to view product
-
+1.A website where artist can sell their art
 
 
 Database Values
